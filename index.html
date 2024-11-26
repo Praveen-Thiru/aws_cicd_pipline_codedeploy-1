@@ -1,37 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title> CICD | AWS CLOUD DEPLOYMENT</title>
-  <style>
-    body {
-      color: #000080;
-      background-color: #FFFFFF;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
-    
-    h1 {
-      font-size: 500%;
-      font-weight: normal;
-      margin-bottom: 0;
-    }
-    
-    h2 {
-      font-size: 200%;
-      font-weight: normal;
-      margin-bottom: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .btn {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #4cae4c;
+        }
+    </style>
 </head>
 <body>
-  <div align="center">
-    <img src="https://s3.ap-south-1.amazonaws.com/www.basava.com/aar_logo_final.png" style="max-width: 20%;">
-    <h1>Congratulations!!! </h1>
-      <h2> quantum | praveen </h2>
-    <h3>This application was deployed using AWS CodeDeploy.</h3>
-    <p>For next steps, read the <a href="http://aws.amazon.com/documentation/codedeploy">AWS CodeDeploy Documentation</a>.</p>
-  </div>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="/submit-login" method="POST">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+    </form>
+</div>
+
 </body>
 </html>
-
