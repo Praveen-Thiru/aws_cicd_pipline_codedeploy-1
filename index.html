@@ -3,78 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WELCOME</title>
+    <title>Login Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 20px;
-            background-color: #eaeaea;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #4CAF50;
-        }
-        section {
+        .login-container {
             background: white;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
             margin-bottom: 20px;
         }
-        footer {
-            text-align: center;
-            padding: 10px 0;
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
             background-color: #4CAF50;
             color: white;
-            position: relative;
-            bottom: 0;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
             width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>WELCOME</h1>
-</header>
-
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<main>
-    <section id="home">
-        <h2>Home</h2>
-        <p>A CI/CD pipeline is an automated process that streamlines software development, testing, and deployment..</p>
-    </section>
-
-    <section id="about">
-        <h2>About</h2>
-        <p>The Real AWS CodeDeploy | CICD Pipeline | Setup | Deploy application on EC2 using GitHub.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can contact us at: <a href="praveen,t6670@gmail.com">praveen,t6670@gmail.com</a></p>
-    </section>
-</main>
-
-<footer>
-    <p>&copy; 2023 My Simple Web Page. All rights reserved.</p>
-</footer>
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <input type="submit" value="Login">
+    </form>
+    <div class="footer">
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </div>
+</div>
 
 </body>
 </html>
